@@ -40,10 +40,10 @@ ul {
   padding: 0px;
 }
 li, h3 {
-  list-style:none;
+  list-style: none;
 }
 input,button{
-  outline:none;
+  outline: none;
 }
 button {
   background: none;
@@ -74,8 +74,8 @@ input[type="text"] {
   line-height: 18px;
   height: 21px;
   padding: 0 9px;
-  border: 1px solid #dDd;
-  background: #FFF;
+  border: 1px solid #dddddd;
+  background: #ffffff;
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888888;
@@ -136,14 +136,14 @@ ul#completed-tasks label {
 
 /* Edit Task */
 ul li input[type=text] {
-  display:none;
+  display: none;
 }
 
 ul li.editMode input[type=text] {
-  display:inline-block;
-  width:224px;
+  display: inline-block;
+  width: 224px;
 }
 
 ul li.editMode label {
-  display:none;
+  display: none;
 }
