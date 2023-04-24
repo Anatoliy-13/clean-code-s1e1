@@ -33,20 +33,20 @@ var createNewTaskElement=function(taskString){
     var deleteButtonImg=document.createElement("img");//delete button image
 
     label.innerText=taskString;
-    label.className='task list-item-task';
-    listItem.className='list-item';// добавил класс 
+    label.className='task list__item-label';
+    listItem.className='list__item';// добавил класс 
     //Each elements, needs appending
     checkBox.type="checkbox";
-    checkBox.className="input-checkbox";// добавил класс
+    checkBox.className="list__item-checkbox";// добавил класс
     editInput.type="text";
     editInput.className="task input-text";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="edit button";// добавил класс
+    editButton.className="button__edit button";// добавил класс
 
-    deleteButton.className="delete button";// добавил класс
+    deleteButton.className="button__delete button";// добавил класс
     deleteButtonImg.src='./remove.svg';
-    deleteButtonImg.className="button-delete-image";// добавил класс
+    deleteButtonImg.className="button__delete-image";// добавил класс
     deleteButton.appendChild(deleteButtonImg);
 
 
@@ -86,12 +86,12 @@ var editTask=function(){
 
     var editInput=listItem.querySelector('.input-text');
     var label=listItem.querySelector("label");
-    var editBtn=listItem.querySelector(".edit");
-    var containsClass=listItem.classList.contains("list-item-edit");
-    //If class of the parent is .list-item-edit
+    var editBtn=listItem.querySelector(".button__edit");
+    var containsClass=listItem.classList.contains("list__item-edit");
+    //If class of the parent is .list__item-edit
     if(containsClass){
 
-        //switch to .list-item-edit
+        //switch to .list__item-edit
         //label becomes the inputs value.
         label.innerText=editInput.value;
         editBtn.innerText="Edit";
@@ -100,8 +100,8 @@ var editTask=function(){
         editBtn.innerText="Save";
     }
 
-    //toggle .list-item-edit on the parent.
-    listItem.classList.toggle("list-item-edit");
+    //toggle .list__item-edit on the parent.
+    listItem.classList.toggle("list__item-edit");
 };
 
 
@@ -160,8 +160,8 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
     console.log("bind list item events");
 //select ListItems children
     var checkBox=taskListItem.querySelector("input[type=checkbox]");
-    var editButton=taskListItem.querySelector("button.edit");
-    var deleteButton=taskListItem.querySelector("button.delete");
+    var editButton=taskListItem.querySelector("button.button__edit");
+    var deleteButton=taskListItem.querySelector("button.button__delete");
 
 
     //Bind editTask to edit button.
