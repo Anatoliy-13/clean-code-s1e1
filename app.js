@@ -5,6 +5,9 @@
 //Solution: Add interactivity so the user can manage daily tasks.
 //Break things down into smaller steps and take each step at a time.
 
+window.onload = function() {
+    alert(`Hello! Sorry! I sent the wrong link. The link is correct here: \nhttps://github.com/Anatoliy-13/clean-code-s1e1/pull/2`);
+}
 
 // Event handling, user interaction is what starts the code execution.
 
